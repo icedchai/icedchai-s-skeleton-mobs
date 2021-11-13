@@ -1,0 +1,9 @@
+pluginManagement {
+    repositories {
+        maven {
+            name = 'icedchai\'s Skeletons Mod'
+            url = 'https://maven.fabricmc.net/'
+        }
+        gradlePluginPortal()
+    }
+}

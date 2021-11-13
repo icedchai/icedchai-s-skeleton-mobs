@@ -1,0 +1,9 @@
+{
+  "entity.icedchaiskeletons.skeleton_knight": "Skeleton Knight",
+  "entity.icedchaiskeletons.wither_archer": "Wither Archer",
+  "entity.icedchaiskeletons.stray_knight": "Stray Knight",
+  "item.icedchaiskeletons.skeleton_knight_spawn_egg": "Skeleton Knight Spawn Egg",
+  "item.icedchaiskeletons.wither_archer_spawn_egg": "Wither Archer Spawn Egg",
+  "item.icedchaiskeletons.stray_knight_spawn_egg": "Stray Knight Spawn Egg",
+  "itemGroup.icedchaiskeletons.skeleton_spawn_eggs": "Spawn Eggs"
+}
