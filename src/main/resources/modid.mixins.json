@@ -4,7 +4,6 @@
   "package": "me.icedchai.skeletonmobs.common.mixin",
   "compatibilityLevel": "JAVA_16",
   "mixins": [
-
     "spawnMixin"
   ],
   "client": [
