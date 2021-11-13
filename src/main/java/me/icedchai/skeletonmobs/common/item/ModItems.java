@@ -2,14 +2,10 @@ package me.icedchai.skeletonmobs.common.item;
 
 import me.icedchai.skeletonmobs.common.Init;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
-import net.minecraft.entity.EntityType;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemGroup;
 import net.minecraft.item.SpawnEggItem;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
-import net.minecraft.item.Items;
-import org.lwjgl.system.CallbackI;
 
 
 public class ModItems {

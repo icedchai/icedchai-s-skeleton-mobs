@@ -1,8 +1,6 @@
 package me.icedchai.skeletonmobs.common.mixin;
 
 import me.icedchai.skeletonmobs.common.Init;
-import me.icedchai.skeletonmobs.common.entity.SkeletonKnightEntity;
-import net.minecraft.entity.EntityType;
 import net.minecraft.entity.SpawnGroup;
 import net.minecraft.world.biome.SpawnSettings;
 import net.minecraft.world.gen.feature.DefaultBiomeFeatures;
