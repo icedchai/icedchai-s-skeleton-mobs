@@ -1,14 +1,11 @@
 package me.icedchai.skeletonmobs.common.entity;
 
-import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.attribute.DefaultAttributeContainer;
 import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.entity.damage.DamageSource;
-import net.minecraft.entity.mob.CreeperEntity;
 import net.minecraft.entity.mob.HostileEntity;
-import net.minecraft.entity.mob.SkeletonEntity;
 import net.minecraft.entity.mob.StrayEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
@@ -16,7 +13,6 @@ import net.minecraft.sound.SoundEvent;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.world.LocalDifficulty;
 import net.minecraft.world.World;
-import net.minecraft.world.WorldEvents;
 
 import java.util.Random;
 
@@ -37,7 +33,6 @@ public class StrayKnightEntity extends StrayEntity {
         if(random.nextInt(2)==0) {
             this.equipStack(EquipmentSlot.HEAD, new ItemStack(Items.IRON_HELMET));
             hasHelmet=true;
-            this.equipStack(EquipmentSlot.MAINHAND, new ItemStack(Items.STONE_SWORD));
         }
         if(random.nextInt(10)==0&&hasHelmet) {
             equipStack(EquipmentSlot.CHEST, new ItemStack(Items.IRON_CHESTPLATE));
@@ -45,7 +40,7 @@ public class StrayKnightEntity extends StrayEntity {
             this.equipStack(EquipmentSlot.MAINHAND, new ItemStack(Items.IRON_SWORD));
             hasHeavy=true;
         }
-        if(!hasHelmet)
+        if(!hasHeavy)
             this.equipStack(EquipmentSlot.MAINHAND, new ItemStack(Items.STONE_SWORD));
 
     }

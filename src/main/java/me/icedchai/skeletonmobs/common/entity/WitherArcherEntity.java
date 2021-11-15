@@ -25,8 +25,6 @@ public class WitherArcherEntity extends WitherSkeletonEntity {
 
     public Random random = new Random();
 
-    public boolean SkeletonCanSpawn = true;
-
     public WitherArcherEntity(EntityType<? extends WitherSkeletonEntity> entityType, World world) {
         super(entityType, world);
 

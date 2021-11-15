@@ -1,10 +1,10 @@
-package me.icedchai.skeletonmobs.common;
+package me.icedchai.skeletonmobs;
 
 
 import me.icedchai.skeletonmobs.common.entity.SkeletonKnightEntity;
 import me.icedchai.skeletonmobs.common.entity.StrayKnightEntity;
 import me.icedchai.skeletonmobs.common.entity.WitherArcherEntity;
-import me.icedchai.skeletonmobs.common.item.ModItems;
+import me.icedchai.skeletonmobs.common.init.item.ItemInit;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
@@ -20,12 +20,11 @@ import net.minecraft.util.registry.Registry;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-public class Init implements ModInitializer {
+public class IcedchaisSkeletons implements ModInitializer {
 
 	public static String MODID = "icedchaiskeletons";
 
 	public static final Logger LOGGER = LogManager.getLogger("icedchais");
-
 	public static final EntityType<SkeletonKnightEntity> SKNIGHT = Registry.register(
 			Registry.ENTITY_TYPE,
 			new Identifier(MODID, "skeleton_knight"),
@@ -41,15 +40,12 @@ public class Init implements ModInitializer {
 			new Identifier(MODID, "stray_knight"),
 			FabricEntityTypeBuilder.create(SpawnGroup.MONSTER, StrayKnightEntity::new).dimensions(EntityDimensions.fixed(0.6f, 1.99f)).build()
 	);
-	public static final ItemGroup MAIN_ITEM_GROUP = FabricItemGroupBuilder.build(
-			new Identifier(MODID, "skeleton_spawn_eggs"),
-			() -> new ItemStack(Items.BONE));
 
 	@Override
 	public void onInitialize() {
 		FabricDefaultAttributeRegistry.register(SKNIGHT, SkeletonKnightEntity.createSKnightAttributes());
 		FabricDefaultAttributeRegistry.register(WARCHER, WitherArcherEntity.createWArcherAttributes());
 		FabricDefaultAttributeRegistry.register(STKNIGHT, StrayKnightEntity.createStKnightAttributes());
-		ModItems.register();
+		ItemInit.register();
 	}
 }

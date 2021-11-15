@@ -19,7 +19,7 @@
   "environment": "*",
   "entrypoints": {
     "main": [
-      "me.icedchai.skeletonmobs.common.Init"
+      "me.icedchai.skeletonmobs.IcedchaisSkeletons"
     ],
     "client": [
       "me.icedchai.skeletonmobs.client.ClientInit"

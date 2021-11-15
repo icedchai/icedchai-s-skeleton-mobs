@@ -1,7 +1,7 @@
 package me.icedchai.skeletonmobs.client;
 
+import me.icedchai.skeletonmobs.IcedchaisSkeletons;
 import me.icedchai.skeletonmobs.client.entity.StrayKnightEntityRenderer;
-import me.icedchai.skeletonmobs.common.Init;
 import me.icedchai.skeletonmobs.client.entity.SkeletonKnightEntityRenderer;
 import me.icedchai.skeletonmobs.client.entity.WitherArcherEntityRenderer;
 import net.fabricmc.api.ClientModInitializer;
@@ -11,7 +11,7 @@ import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
 import net.minecraft.client.render.entity.model.EntityModelLayer;
 import net.minecraft.util.Identifier;
 
-import static me.icedchai.skeletonmobs.common.Init.MODID;
+import static me.icedchai.skeletonmobs.IcedchaisSkeletons.MODID;
 
 @Environment(EnvType.CLIENT)
 public class ClientInit implements ClientModInitializer {
@@ -20,13 +20,13 @@ public class ClientInit implements ClientModInitializer {
 
     @Override
     public void onInitializeClient() {
-        EntityRendererRegistry.register(Init.SKNIGHT, (ctx) -> {
+        EntityRendererRegistry.register(IcedchaisSkeletons.SKNIGHT, (ctx) -> {
             return new SkeletonKnightEntityRenderer(ctx);
         });
-        EntityRendererRegistry.register(Init.WARCHER, (ctx) -> {
+        EntityRendererRegistry.register(IcedchaisSkeletons.WARCHER, (ctx) -> {
             return new WitherArcherEntityRenderer(ctx);
         });
-        EntityRendererRegistry.register(Init.STKNIGHT, (ctx) -> {
+        EntityRendererRegistry.register(IcedchaisSkeletons.STKNIGHT, (ctx) -> {
             return new StrayKnightEntityRenderer(ctx);
         });
 

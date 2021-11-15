@@ -1,6 +1,6 @@
 package me.icedchai.skeletonmobs.common.entity;
 
-import me.icedchai.skeletonmobs.common.Init;
+import me.icedchai.skeletonmobs.IcedchaisSkeletons;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.EquipmentSlot;
@@ -23,7 +23,7 @@ import java.util.Random;
 public class SkeletonKnightEntity extends SkeletonEntity {
 
     public Random random = new Random();
-    public boolean SkeletonCanSpawn = true;
+
 
     public SkeletonKnightEntity(EntityType<? extends SkeletonEntity> entityType, World world) {
         super(entityType, world);
@@ -31,6 +31,7 @@ public class SkeletonKnightEntity extends SkeletonEntity {
     }
 
     protected void initEquipment(LocalDifficulty difficulty) {
+
         boolean hasHelmet=false;
         boolean hasHeavy=false;
 
@@ -68,7 +69,7 @@ public class SkeletonKnightEntity extends SkeletonEntity {
     SoundEvent getStepSound() { return SoundEvents.ENTITY_SKELETON_STEP;}
 
     protected void convertToStray() {
-        this.convertTo(Init.STKNIGHT, true);
+        this.convertTo(IcedchaisSkeletons.STKNIGHT, true);
         if (!this.isSilent()) {
             this.world.syncWorldEvent(null, WorldEvents.SKELETON_CONVERTS_TO_STRAY, this.getBlockPos(), 0);
         }
