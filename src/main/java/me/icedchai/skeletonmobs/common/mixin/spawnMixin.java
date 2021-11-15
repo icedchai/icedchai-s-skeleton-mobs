@@ -10,7 +10,7 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 @Mixin(DefaultBiomeFeatures.class)
-public class spawnMixin extends DefaultBiomeFeatures{
+public class spawnMixin {
     @Inject(method = "addMonsters", at = @At("HEAD"), cancellable = true)
     private static void spawnSKnight(SpawnSettings.Builder builder,  int zombieWeight, int zombieVillagerWeight, int skeletonWeight, CallbackInfo cir) {
         builder.spawn(SpawnGroup.MONSTER, new SpawnSettings.SpawnEntry(IcedchaisSkeletons.SKNIGHT, 100, 3, 5));
