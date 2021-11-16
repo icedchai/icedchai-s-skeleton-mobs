@@ -26,14 +26,18 @@ public class WitherArcherEntity extends WitherSkeletonEntity {
 
     }
 
+    public static DefaultAttributeContainer.Builder createWArcherAttributes() {
+        return HostileEntity.createHostileAttributes()
+
+                .add(EntityAttributes.GENERIC_MOVEMENT_SPEED, 0.25D)
+                .add(EntityAttributes.GENERIC_ATTACK_KNOCKBACK, 0)
+                ;
+    }
 
     protected void initEquipment(LocalDifficulty difficulty) {
         super.initEquipment(difficulty);
         this.equipStack(EquipmentSlot.MAINHAND, new ItemStack(Items.BOW));
     }
-
-
-
 
     protected SoundEvent getAmbientSound() {
         return SoundEvents.ENTITY_PIG_AMBIENT;
@@ -47,23 +51,17 @@ public class WitherArcherEntity extends WitherSkeletonEntity {
         return SoundEvents.ENTITY_PIG_DEATH;
     }
 
-    SoundEvent getStepSound() { return SoundEvents.ENTITY_PIG_STEP;}
-
-
-    public static DefaultAttributeContainer.Builder createWArcherAttributes(){
-        return HostileEntity.createHostileAttributes()
-
-                .add(EntityAttributes.GENERIC_MOVEMENT_SPEED, 0.25D)
-                .add(EntityAttributes.GENERIC_ATTACK_KNOCKBACK, 0)
-                ;
+    SoundEvent getStepSound() {
+        return SoundEvents.ENTITY_PIG_STEP;
     }
+
     @Override
     protected void initGoals() {
         this.goalSelector.add(3, new FleeEntityGoal(this, WolfEntity.class, 6.0F, 1.0D, 1.2D));
         this.goalSelector.add(5, new WanderAroundFarGoal(this, 1.0D));
         this.goalSelector.add(6, new LookAtEntityGoal(this, PlayerEntity.class, 8.0F));
         this.goalSelector.add(6, new LookAroundGoal(this));
-        this.targetSelector.add(1, new RevengeGoal(this, new Class[0]));
+        this.targetSelector.add(1, new RevengeGoal(this));
         this.targetSelector.add(2, new FollowTargetGoal(this, PlayerEntity.class, true));
         this.targetSelector.add(3, new FollowTargetGoal(this, IronGolemEntity.class, true));
         this.targetSelector.add(3, new FollowTargetGoal(this, TurtleEntity.class, 10, true, false, TurtleEntity.BABY_TURTLE_ON_LAND_FILTER));

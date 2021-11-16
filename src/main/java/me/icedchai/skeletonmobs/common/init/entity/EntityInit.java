@@ -30,7 +30,7 @@ public class EntityInit {
             FabricEntityTypeBuilder.create(SpawnGroup.MONSTER, StrayKnightEntity::new).dimensions(EntityDimensions.fixed(0.9f, 0.9f)).build()
     );
 
-    public static void register(){
+    public static void register() {
         FabricDefaultAttributeRegistry.register(SKNIGHT, SkeletonKnightEntity.createSKnightAttributes());
         FabricDefaultAttributeRegistry.register(WARCHER, WitherArcherEntity.createWArcherAttributes());
         FabricDefaultAttributeRegistry.register(STKNIGHT, StrayKnightEntity.createStKnightAttributes());
