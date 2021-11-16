@@ -23,6 +23,7 @@ public class SkeletonKnightEntity extends SkeletonEntity {
 
     protected void initEquipment(LocalDifficulty difficulty) {
         super.initEquipment(difficulty);
+        this.equipStack(EquipmentSlot.HEAD, new ItemStack(Items.IRON_HELMET));
         this.equipStack(EquipmentSlot.MAINHAND, new ItemStack(Items.IRON_SWORD));
 
     }
@@ -44,11 +45,8 @@ public class SkeletonKnightEntity extends SkeletonEntity {
 
 
     SoundEvent getStepSound() { return SoundEvents.ENTITY_PIG_STEP;}
-//makes fire immune
-    @Override
-    public void tickMovement(){
 
-    }
+
 
     protected void convertToStray() {
 
@@ -61,9 +59,5 @@ public class SkeletonKnightEntity extends SkeletonEntity {
                 .add(EntityAttributes.GENERIC_FOLLOW_RANGE, 100)
                 .add(EntityAttributes.GENERIC_MAX_HEALTH, 16)
                 ;
-    }
-    @Override
-    protected void dropEquipment(DamageSource source, int lootingMultiplier, boolean allowDrops) {
-
     }
 }

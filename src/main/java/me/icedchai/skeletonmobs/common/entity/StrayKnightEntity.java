@@ -24,11 +24,7 @@ public class StrayKnightEntity extends StrayEntity {
     protected void initEquipment(LocalDifficulty difficulty) {
         super.initEquipment(difficulty);
         this.equipStack(EquipmentSlot.MAINHAND, new ItemStack(Items.NETHERITE_AXE));
-
-    }
-    @Override
-    public void tickMovement(){
-
+        this.equipStack(EquipmentSlot.HEAD, new ItemStack(Items.IRON_HELMET));
     }
 
 
