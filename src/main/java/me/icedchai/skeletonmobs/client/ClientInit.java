@@ -4,6 +4,7 @@ import me.icedchai.skeletonmobs.IcedchaisSkeletons;
 import me.icedchai.skeletonmobs.client.entity.StrayKnightEntityRenderer;
 import me.icedchai.skeletonmobs.client.entity.SkeletonKnightEntityRenderer;
 import me.icedchai.skeletonmobs.client.entity.WitherArcherEntityRenderer;
+import me.icedchai.skeletonmobs.common.init.entity.EntityInit;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
@@ -20,13 +21,13 @@ public class ClientInit implements ClientModInitializer {
 
     @Override
     public void onInitializeClient() {
-        EntityRendererRegistry.register(IcedchaisSkeletons.SKNIGHT, (ctx) -> {
+        EntityRendererRegistry.register(EntityInit.SKNIGHT, (ctx) -> {
             return new SkeletonKnightEntityRenderer(ctx);
         });
-        EntityRendererRegistry.register(IcedchaisSkeletons.WARCHER, (ctx) -> {
+        EntityRendererRegistry.register(EntityInit.WARCHER, (ctx) -> {
             return new WitherArcherEntityRenderer(ctx);
         });
-        EntityRendererRegistry.register(IcedchaisSkeletons.STKNIGHT, (ctx) -> {
+        EntityRendererRegistry.register(EntityInit.STKNIGHT, (ctx) -> {
             return new StrayKnightEntityRenderer(ctx);
         });
 

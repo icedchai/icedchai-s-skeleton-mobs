@@ -1,6 +1,7 @@
 package me.icedchai.skeletonmobs.common.entity;
 
 import me.icedchai.skeletonmobs.IcedchaisSkeletons;
+import me.icedchai.skeletonmobs.common.init.entity.EntityInit;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.EquipmentSlot;
@@ -31,22 +32,8 @@ public class SkeletonKnightEntity extends SkeletonEntity {
     }
 
     protected void initEquipment(LocalDifficulty difficulty) {
-
-        boolean hasHelmet=false;
-        boolean hasHeavy=false;
-
-        if(random.nextInt(2)==0) {
-            this.equipStack(EquipmentSlot.HEAD, new ItemStack(Items.IRON_HELMET));
-            hasHelmet=true;
-        }
-        if(random.nextInt(10)==0&&hasHelmet) {
-            equipStack(EquipmentSlot.CHEST, new ItemStack(Items.IRON_CHESTPLATE));
-            this.equipStack(EquipmentSlot.OFFHAND, new ItemStack(Items.SHIELD));
-            this.equipStack(EquipmentSlot.MAINHAND, new ItemStack(Items.IRON_SWORD));
-            hasHeavy=true;
-        }
-        if(!hasHeavy)
-            this.equipStack(EquipmentSlot.MAINHAND, new ItemStack(Items.STONE_SWORD));
+        super.initEquipment(difficulty);
+        this.equipStack(EquipmentSlot.MAINHAND, new ItemStack(Items.STONE_SWORD));
 
     }
 
@@ -69,7 +56,7 @@ public class SkeletonKnightEntity extends SkeletonEntity {
     SoundEvent getStepSound() { return SoundEvents.ENTITY_SKELETON_STEP;}
 
     protected void convertToStray() {
-        this.convertTo(IcedchaisSkeletons.STKNIGHT, true);
+        this.convertTo(EntityInit.STKNIGHT, true);
         if (!this.isSilent()) {
             this.world.syncWorldEvent(null, WorldEvents.SKELETON_CONVERTS_TO_STRAY, this.getBlockPos(), 0);
         }

@@ -32,12 +32,8 @@ public class WitherArcherEntity extends WitherSkeletonEntity {
 
 
     protected void initEquipment(LocalDifficulty difficulty) {
-
+        super.initEquipment(difficulty);
         this.equipStack(EquipmentSlot.MAINHAND, new ItemStack(Items.BOW));
-        if(random.nextInt(2)==0)
-            this.equipStack(EquipmentSlot.HEAD, new ItemStack(Items.GOLDEN_HELMET));
-        if(random.nextInt(6)==0)
-            this.equipStack(EquipmentSlot.CHEST, new ItemStack(Items.GOLDEN_CHESTPLATE));
     }
 
 

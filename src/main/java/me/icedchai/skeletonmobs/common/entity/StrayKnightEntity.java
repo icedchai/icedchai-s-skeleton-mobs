@@ -27,21 +27,8 @@ public class StrayKnightEntity extends StrayEntity {
     }
 
     protected void initEquipment(LocalDifficulty difficulty) {
-        boolean hasHelmet=false;
-        boolean hasHeavy=false;
-
-        if(random.nextInt(2)==0) {
-            this.equipStack(EquipmentSlot.HEAD, new ItemStack(Items.IRON_HELMET));
-            hasHelmet=true;
-        }
-        if(random.nextInt(10)==0&&hasHelmet) {
-            equipStack(EquipmentSlot.CHEST, new ItemStack(Items.IRON_CHESTPLATE));
-            this.equipStack(EquipmentSlot.OFFHAND, new ItemStack(Items.SHIELD));
-            this.equipStack(EquipmentSlot.MAINHAND, new ItemStack(Items.IRON_SWORD));
-            hasHeavy=true;
-        }
-        if(!hasHeavy)
-            this.equipStack(EquipmentSlot.MAINHAND, new ItemStack(Items.STONE_SWORD));
+        super.initEquipment(difficulty);
+        this.equipStack(EquipmentSlot.MAINHAND, new ItemStack(Items.STONE_SWORD));
 
     }
 
