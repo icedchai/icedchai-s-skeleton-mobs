@@ -36,18 +36,18 @@ public class WitherArcherEntity extends WitherSkeletonEntity {
 
 
     protected SoundEvent getAmbientSound() {
-        return SoundEvents.ENTITY_WITHER_SKELETON_AMBIENT;
+        return SoundEvents.ENTITY_PIG_AMBIENT;
     }
 
     protected SoundEvent getHurtSound(DamageSource source) {
-        return SoundEvents.ENTITY_WITHER_SKELETON_HURT;
+        return SoundEvents.ENTITY_PIG_HURT;
     }
 
     protected SoundEvent getDeathSound() {
-        return SoundEvents.ENTITY_WITHER_SKELETON_DEATH;
+        return SoundEvents.ENTITY_PIG_DEATH;
     }
 
-    SoundEvent getStepSound() { return SoundEvents.ENTITY_WITHER_SKELETON_STEP;}
+    SoundEvent getStepSound() { return SoundEvents.ENTITY_PIG_STEP;}
 
 
     public static DefaultAttributeContainer.Builder createWArcherAttributes(){

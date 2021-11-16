@@ -23,35 +23,38 @@ public class StrayKnightEntity extends StrayEntity {
 
     protected void initEquipment(LocalDifficulty difficulty) {
         super.initEquipment(difficulty);
-        this.equipStack(EquipmentSlot.MAINHAND, new ItemStack(Items.STONE_SWORD));
+        this.equipStack(EquipmentSlot.MAINHAND, new ItemStack(Items.NETHERITE_AXE));
 
     }
+    @Override
+    public void tickMovement(){
 
+    }
 
 
 
     protected SoundEvent getAmbientSound() {
-        return SoundEvents.ENTITY_STRAY_AMBIENT;
+        return SoundEvents.ENTITY_PIG_AMBIENT;
     }
 
     protected SoundEvent getHurtSound(DamageSource source) {
-        return SoundEvents.ENTITY_STRAY_HURT;
+        return SoundEvents.ENTITY_PIG_HURT;
     }
 
     protected SoundEvent getDeathSound() {
-        return SoundEvents.ENTITY_STRAY_DEATH;
+        return SoundEvents.ENTITY_PIG_DEATH;
     }
 
 
-    SoundEvent getStepSound() { return SoundEvents.ENTITY_STRAY_STEP;}
+    SoundEvent getStepSound() { return SoundEvents.ENTITY_PIG_STEP;}
 
 
     public static DefaultAttributeContainer.Builder createStKnightAttributes(){
         return HostileEntity.createHostileAttributes()
 
                 .add(EntityAttributes.GENERIC_MOVEMENT_SPEED, 0.26D)
-                .add(EntityAttributes.GENERIC_FOLLOW_RANGE, 30)
-                .add(EntityAttributes.GENERIC_MAX_HEALTH, 20)
+                .add(EntityAttributes.GENERIC_FOLLOW_RANGE, 100)
+                .add(EntityAttributes.GENERIC_MAX_HEALTH, 29)
                 ;
     }
 }
