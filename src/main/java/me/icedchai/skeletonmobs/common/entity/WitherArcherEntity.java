@@ -19,11 +19,7 @@ import net.minecraft.sound.SoundEvents;
 import net.minecraft.world.LocalDifficulty;
 import net.minecraft.world.World;
 
-import java.util.Random;
-
 public class WitherArcherEntity extends WitherSkeletonEntity {
-
-    public Random random = new Random();
 
     public WitherArcherEntity(EntityType<? extends WitherSkeletonEntity> entityType, World world) {
         super(entityType, world);

@@ -14,12 +14,7 @@ import net.minecraft.sound.SoundEvents;
 import net.minecraft.world.LocalDifficulty;
 import net.minecraft.world.World;
 
-import java.util.Random;
-
 public class StrayKnightEntity extends StrayEntity {
-
-    public Random random = new Random();
-
 
     public StrayKnightEntity(EntityType<? extends StrayEntity> entityType, World world) {
         super(entityType, world);

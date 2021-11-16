@@ -1,6 +1,5 @@
 package me.icedchai.skeletonmobs.common.entity;
 
-import me.icedchai.skeletonmobs.IcedchaisSkeletons;
 import me.icedchai.skeletonmobs.common.init.entity.EntityInit;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
@@ -19,12 +18,7 @@ import net.minecraft.world.LocalDifficulty;
 import net.minecraft.world.World;
 import net.minecraft.world.WorldEvents;
 
-import java.util.Random;
-
 public class SkeletonKnightEntity extends SkeletonEntity {
-
-    public Random random = new Random();
-
 
     public SkeletonKnightEntity(EntityType<? extends SkeletonEntity> entityType, World world) {
         super(entityType, world);

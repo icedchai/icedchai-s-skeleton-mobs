@@ -1,11 +1,8 @@
-package me.icedchai.skeletonmobs.common.mixin;
+ package me.icedchai.skeletonmobs.common.mixin;
 
-import me.icedchai.skeletonmobs.IcedchaisSkeletons;
-import me.icedchai.skeletonmobs.common.entity.WitherArcherEntity;
+        import me.icedchai.skeletonmobs.common.entity.WitherArcherEntity;
 import me.icedchai.skeletonmobs.common.init.entity.EntityInit;
 import net.minecraft.entity.EntityType;
-import net.minecraft.entity.SpawnGroup;
-import net.minecraft.world.biome.SpawnSettings;
 import net.minecraft.world.gen.feature.NetherFortressFeature;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
@@ -15,9 +12,9 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 @Mixin(NetherFortressFeature.class)
 public class netherSpawnMixin {
     private static final EntityType<WitherArcherEntity> WARCHER = EntityInit.WARCHER;
-    @Inject(method = "", at = @At("HEAD"), cancellable = true)
-    private void spawnCustoms(SpawnSettings.Builder builder, CallbackInfoReturnable<Boolean> cir) {
-        builder.spawn(SpawnGroup.MONSTER, new SpawnSettings.SpawnEntry(WARCHER, 50, 4, 4));
+    @Inject(method = "getMonsterSpawns", at = @At("TAIL"), cancellable = true)
+    private void spawnCustoms(CallbackInfoReturnable<Boolean> cir) {
+
     }
 
 }
