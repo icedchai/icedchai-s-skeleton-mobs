@@ -12,7 +12,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 @Mixin(DefaultBiomeFeatures.class)
 public class spawnMixin {
     @Inject(method = "addMonsters", at = @At("HEAD"), cancellable = true)
-    private static void spawnSKnight(SpawnSettings.Builder builder,  int zombieWeight, int zombieVillagerWeight, int skeletonWeight, CallbackInfo cir) {
+    private static void spawnSKnight(SpawnSettings.Builder builder,  int zombieWeight, int zombieVillagerWeight, int skeletonWeight, boolean drowned, CallbackInfo cir) {
         builder.spawn(SpawnGroup.MONSTER, new SpawnSettings.SpawnEntry(EntityInit.SKNIGHT, 70, 4, 4));
     }
 

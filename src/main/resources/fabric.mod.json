@@ -1,20 +1,20 @@
 {
   "schemaVersion": 1,
-  "id": "icedchaisfabric",
+  "id": "icedchaiskeletons",
   "version": "0.0.1",
 
-  "name": "icedchai's fabric mod",
-  "description": "stuff i make while using fabric",
+  "name": "icedchai's Skeletons Mod",
+  "description": "Adds skeleton archers",
   "authors": [
     "Me!"
   ],
   "contact": {
     "homepage": "https://fabricmc.net/",
-    "sources": "https://github.com/FabricMC/fabric-example-mod"
+    "sources": "https://github.com/icedchai/icedchai-s-skeleton-mobs"
   },
 
-  "license": "CC0-1.0",
-  "icon": "assets/modid/icon.png",
+  "license": "MIT License",
+  "icon": "assets/icedchaiskeletons/icon.png",
 
   "environment": "*",
   "entrypoints": {
@@ -30,10 +30,10 @@
   ],
 
   "depends": {
-    "fabricloader": ">=0.11.3",
+    "fabricloader": ">=0.12.6",
     "fabric": "*",
-    "minecraft": "1.17.x",
-    "java": ">=16"
+    "minecraft": "1.18.x",
+    "java": ">=17"
   },
   "suggests": {
     "another-mod": "*"
