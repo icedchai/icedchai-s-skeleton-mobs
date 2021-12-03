@@ -1,8 +1,7 @@
 package me.icedchai.skeletonmobs.client;
 
-import me.icedchai.skeletonmobs.IcedchaisSkeletons;
-import me.icedchai.skeletonmobs.client.entity.StrayKnightEntityRenderer;
 import me.icedchai.skeletonmobs.client.entity.SkeletonKnightEntityRenderer;
+import me.icedchai.skeletonmobs.client.entity.StrayKnightEntityRenderer;
 import me.icedchai.skeletonmobs.client.entity.WitherArcherEntityRenderer;
 import me.icedchai.skeletonmobs.common.init.entity.EntityInit;
 import net.fabricmc.api.ClientModInitializer;
