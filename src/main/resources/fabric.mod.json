@@ -4,7 +4,7 @@
   "version": "0.0.1",
 
   "name": "icedchai's Skeletons Mod",
-  "description": "Adds skeleton archers",
+  "description": "Adds skeletons that use the weapon opposite of what they usually use-- \nSkeletons may use a sword, and wither skeletons may use bows...",
   "authors": [
     "Me!"
   ],
